@@ -10,7 +10,7 @@ script:
   - docker build -t thanhndse/demo-docker:latest -t thanhndse/demo-docker:1.0 .
   - docker push thanhndse/demo-docker:1.0
   - docker push thanhndse/demo-docker:latest
-  - ./mvnw heroku:deploy -P deploy-heroku
+  - ./mvnw heroku:deploy -P deploy-heroku-staging
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
