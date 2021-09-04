@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.thanhnd</groupId>
 	<artifactId>demo-docker</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0</version>
 	<name>demo-docker</name>
 	<description>Demo docker project</description>
 	<properties>
