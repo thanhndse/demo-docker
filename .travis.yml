@@ -6,7 +6,7 @@ install:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker pull openjdk:8-jdk-alpine
 script:
-  - ./mvnw clean org.jacoco:jacoco-maven-plugin:prepare-agent install
+  - ./mvnw clean install
   - docker build -t thanhndse/demo-docker:latest -t thanhndse/demo-docker:1.0 .
   - docker push thanhndse/demo-docker:1.0
   - docker push thanhndse/demo-docker:latest
