@@ -2,7 +2,7 @@ language: java
 jdk:
   - openjdk8
 
-before_install:
+install:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker pull openjdk:8-jdk-alpine
 script:
@@ -11,6 +11,5 @@ script:
   - docker push thanhndse/demo-docker:1.0
   - docker push thanhndse/demo-docker:latest
   - ./mvnw heroku:deploy -P deploy-heroku-staging
-
 after_success:
-  - bash <(curl -s https://codecov.io/bash)
+  - bash <(curl -s https://thanhnd-demo-docker.herokuapp.com/)
