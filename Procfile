@@ -1,0 +1,1 @@
+java $JAVA_OPTS -jar -Dserver.port=$PORT target/demo-docker.jar
