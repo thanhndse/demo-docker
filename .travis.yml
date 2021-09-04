@@ -8,7 +8,7 @@ before_install:
 script:
   - ./mvnw clean org.jacoco:jacoco-maven-plugin:prepare-agent install
   - docker build -t thanhndse/demo-docker:latest .
-  - docker push
+  - docker push thanhndse/demo-docker:latest
   - ./mvnw heroku:deploy -P deploy-heroku
 
 after_success:
