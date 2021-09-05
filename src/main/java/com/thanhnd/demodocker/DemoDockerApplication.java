@@ -11,7 +11,7 @@ public class DemoDockerApplication {
 
 	@GetMapping("/test")
 	public String test(){
-		return "This is my first deploy app";
+		return "Hom nay la thu 2";
 	}
 
 	public static void main(String[] args) {
